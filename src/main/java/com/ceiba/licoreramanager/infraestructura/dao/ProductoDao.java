@@ -34,6 +34,11 @@ private ModelMapper modelMapper=new ModelMapper();
         ProductoDto productoDto=modelMapper.map(productoEntidad,ProductoDto.class);
         return productoDto;
     }
+    public Double obtenerValorporNombre(String nombre){
+        ProductoEntidad productoEntidad=productoRepositorio.filtrarPorNombre(nombre);
+        ProductoDto productoDto=modelMapper.map(productoEntidad,ProductoDto.class);
+        return productoDto.getValor();
+    }
  public List<ProductoEntidad> listar(){
       return productoRepositorio.findAll();
     }

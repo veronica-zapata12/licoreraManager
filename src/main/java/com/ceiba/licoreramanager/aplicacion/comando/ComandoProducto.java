@@ -2,11 +2,14 @@ package com.ceiba.licoreramanager.aplicacion.comando;
 
 import org.springframework.stereotype.Component;
 
+import java.awt.geom.Arc2D;
+import java.util.Date;
+
 @Component
 public class ComandoProducto {
     private int id;
     private String nombre;
-    private int valor;
+    private Double valor;
 
     public int getId() {
         return id;
@@ -24,11 +27,11 @@ public class ComandoProducto {
         this.nombre = nombre;
     }
 
-    public int getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 }

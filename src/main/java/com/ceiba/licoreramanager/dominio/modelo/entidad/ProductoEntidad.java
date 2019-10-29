@@ -16,7 +16,7 @@ public class ProductoEntidad {
     private String nombre;
 
     @Column(name = "valor",nullable = false,length = 500)
-    private Integer valor;
+    private Double valor;
 
     public Integer getId() {
         return id;
@@ -34,11 +34,11 @@ public class ProductoEntidad {
         this.nombre = nombre;
     }
 
-    public Integer getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(Integer valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 }

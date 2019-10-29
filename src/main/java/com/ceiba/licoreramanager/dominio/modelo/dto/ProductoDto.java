@@ -5,18 +5,19 @@ import com.ceiba.licoreramanager.dominio.excepcion.validador.ValidadorArgumento;
 public class ProductoDto {
     private int id;
     private String nombre;
-    private int valor;
+    private Double valor;
     private static final String NOMBRE_OBLIGATORIO="el nombre es obligatorio";
     private static final String VALOR_OBLIGATORIO="el valor es obligatorio";
 
-    public ProductoDto(int id, String nombre, int valor) {
+    public ProductoDto(int id, String nombre, Double valor) {
         ValidadorArgumento.validarObligatorio(nombre,NOMBRE_OBLIGATORIO);
         ValidadorArgumento.validarObligatorio(valor,VALOR_OBLIGATORIO);
-        this.id = id;
         this.nombre = nombre;
         this.valor = valor;
+        this.id=id;
     }
     public ProductoDto(){}
+
 
     public int getId() {
         return id;
@@ -34,11 +35,11 @@ public class ProductoDto {
         this.nombre = nombre;
     }
 
-    public int getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 }
